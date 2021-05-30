@@ -1,0 +1,43 @@
+CREATE TABLE member (
+    memberID int NOT NULL,
+    fName varchar(255) NOT NULL,
+    sName varchar(255) NOT NULL,
+    hCap int NOT NULL,
+    memAddress varchar(255),
+    city varchar(255),
+    eircode varchar(10) NOT NULL,
+    email varchar(255),
+    CONSTRAINT PK_member PRIMARY KEY (memberID)
+);
+
+CREATE TABLE round18 (
+    roundID int  NOT NULL,
+    roundDate date  NOT NULL,
+    CONSTRAINT PK_round18 PRIMARY KEY (roundID)
+);
+
+CREATE TABLE score (
+    roundID int  NOT NULL,
+    memberID int NOT NULL,
+    score int NOT NULL,
+    FOREIGN KEY (roundID) REFERENCES round18(roundID),
+    FOREIGN KEY (memberID) REFERENCES member(memberID)
+);
+
+INSERT INTO member VALUES ('444444', 'James', 'Bond', 7, 'MI5 Building', 'London', 'D33 R6S8', 'bond@mail.com'); 
+INSERT INTO member VALUES ('111111', 'Jack', 'Sparrow', 18, 'Black Pearl', 'Ocean', 'P1R 4T3S', 'sparrow@mail.com'); 
+INSERT INTO member VALUES ('222222', 'Kenny', 'Omega', 1, 'Daleys Place', 'Jacksonville', 'P4N T3R5', 'omega@mail.com'); 
+
+INSERT INTO round18 VALUES (101, '2020-05-12')
+INSERT INTO round18 VALUES (102, '2020-04-13')
+INSERT INTO round18 VALUES (103, '2020-07-14')
+
+INSERT INTO score VALUES (101, '444444', 72)
+INSERT INTO score VALUES (102, '111111', 75)
+INSERT INTO score VALUES (103, '222222', 80)
+
+//create user appUser with password = 'Password@12345';
+
+//grant select,insert,update,delete on object::dbo.member to appUser;
+//grant select,insert,update,delete on object::dbo.round18 to appUser;
+//grant select,insert,update,delete on object::dbo.score to appUser;
