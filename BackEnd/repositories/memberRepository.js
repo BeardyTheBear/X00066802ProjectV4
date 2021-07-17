@@ -23,3 +23,4 @@ const SQL_UPDATE = 'UPDATE Member SET memberID = @memberID, fName = @fName, hCap
 
 const SQL_DELETE = 'DELETE FROM member WHERE memberID = @memberID;';
 
+
