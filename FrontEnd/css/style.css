@@ -46,19 +46,15 @@ html {
     height: 70%;
 }
 
-body {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+#main-log-div {
     display: grid;
     justify-items: center;
     align-items: center;
-    background-color: #3a3a3a;
 }
 
 #main-holder {
     width: 50%;
-    height: 70%;
+    height: 110%;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -122,4 +118,8 @@ body {
     background-color: #3a3a3a;
     cursor: pointer;
     outline: none;
+}
+
+#login-header{
+    padding-top: 50px
 }

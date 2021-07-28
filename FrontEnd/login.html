@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,24 +24,25 @@
     <br>
     <br>
     <br>
+    <div id="main-log-div">
+        <main id="main-holder">
+            <h1 id="login-header">Login</h1>
 
-    <main id="main-holder">
-        <h1 id="login-header">Login</h1>
+            <div id="login-error-msg-holder">
+                <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+            </div>
 
-        <div id="login-error-msg-holder">
-            <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
-        </div>
+            <form id="login-form">
+                <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+                <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+                <input type="submit" value="Login" id="login-form-submit">
+            </form>
 
-        <form id="login-form">
-            <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-            <input type="submit" value="Login" id="login-form-submit">
-        </form>
-
-    </main>
-
+        </main>
+    </div>
 
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./javascript/script.js"></script>
     <!-- Bootstrap 4 Dependencies -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
